@@ -12,11 +12,13 @@ body {
   font-family: sans-serif;
   color: #444;
   border-top: 10px solid #1098ad;
+  position: relative;
 }
 
 .container {
   width: 800px;
   margin: 0 auto;
+  /* position: relative; */
 }
 
 .main-header {
@@ -31,6 +33,7 @@ body {
 
 nav {
   font-size: 18px;
+  /* text-align: center; */
 }
 
 article {
@@ -64,6 +67,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -190,3 +194,35 @@ nav a:link {
 nav a:link:last-child {
   margin-right: 0;
 }
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  /* taking button out of normal flow */
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+/* 
+h2::before {
+  content: "TRYING";
+} */
